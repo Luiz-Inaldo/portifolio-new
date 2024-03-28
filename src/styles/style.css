@@ -142,13 +142,13 @@ header {
     height: 40px;
 
     /* background */
-    background: url("/_public/img/menu.svg");
+    background: url("/public/img/menu.svg");
     background-position: center;
     background-size: cover;
 }
 
 .menu-button.open {
-    background: url("/_public/img/close.svg");
+    background: url("/public/img/close.svg");
     background-position: center;
     background-size: cover;
 }
@@ -172,7 +172,7 @@ main {
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    background: url("/_public/img/background2.jpg");
+    background: url("/public/img/background2.jpg");
     background-position: center;
     background-size: cover;
 }
