@@ -160,6 +160,9 @@ header {
 
 main {
     position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .background {
@@ -169,14 +172,14 @@ main {
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    background: url("https://free4kwallpapers.com/uploads/originals/2020/10/13/digital-landscape-wallpaper.jpg");
+    background: url("/_public/img/background2.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main section {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     color: #fafafa;
     display: flex;
     align-items: center;
