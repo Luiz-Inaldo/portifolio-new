@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* global configs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.green-text {
+    color: #59f359;
+}
+
+.yellow-text {
+    color: #fcff3f;
+}
+
+.purple-text {
+    color: #cd60ff;
+}
+
+/* header */
+header {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    gap: 5px;
+}
+
+/* navbar */
+.navbar {
+    overflow: hidden;
+    height: 100vh;
+    width: 0;
+    transition: all 0.2s;
+}
+
+.navbar.active {
+    color: #fff;
+    width: 210px;
+    padding: 10px 40px;
+    transition: all 0.2s;
+
+    /* glass effect */
+    background: rgba(120, 120, 120, 0.13);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* menu */
+.menu {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-title {
+    text-align: center;
+}
+
+.link-img {
+    width: 20px;
+}
+
+.link-sub {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: normal;
+    gap: 10px;
+}
+
+.sub-menu {
+    overflow: hidden;
+    margin-left: 40px;
+    padding: 0;
+    height: 0;
+    width: 0;
+    transition: all .2s;
+}
+
+.sub-menu span {
+    display: flex;
+    gap: 10px;
+    align-items: normal;
+}
+
+.sub-menu.active {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 0;
+    display: grid;
+    gap: 5px;
+    color: #fff;
+    transition: all .2s;
+}
+
+.menu .link:hover,
+.menu .link-sub:hover,
+.sub-menu span:hover {
+    cursor: pointer;
+    color: #d4d4d4;
+}
+
+.arrow {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-top: transparent;
+    border-left: transparent;
+    transition: all .2s;
+    rotate: 45deg;
+}
+
+.arrow.active {
+    rotate: 225deg;
+    transition: all .2s;
+}
+
+
+
+/* button */
+.menu-button {
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+
+    /* background */
+    background: url("/_public/img/menu.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+.menu-button.open {
+    background: url("/_public/img/close.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* main */
+
+/* background */
+
+main {
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://free4kwallpapers.com/uploads/originals/2020/10/13/digital-landscape-wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main section {
+    width: 100vw;
+    height: 100vh;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title {
+    text-align: center;
+    max-width: 850px;
+    font-size: 90px;
+    font-weight: 600;
+    text-shadow: 3px 3px 0 #1a1a1a;
+}
+
+/* sections */
+#home,
+#about,
+#projects {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(1100px);
+    transition: 0.8s linear;
+}
+
+#home {
+    z-index: 0;
+}
+
+#about {
+    z-index: 1;
+}
+
+#projects {
+    z-index: 2;
+}
+
+#home.active,
+#about.active,
+#projects.active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: 0.8s linear;
+}
+
