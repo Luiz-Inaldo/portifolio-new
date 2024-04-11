@@ -11,14 +11,14 @@ const projects = [
     {
         name: "Space Invaders (P5.js)",
         img: "src/img/projects/space-invaders.jpg",
-        description: "Uma réplica simples do famoso jogo Space Invaders desenvolvida com a lib P5.js (somente para pc)",
+        description: "Uma réplica simples do famoso jogo Space Invaders desenvolvida com o framework P5.js (somente para pc)",
         linkCode: "https://github.com/Luiz-Inaldo/Space_Invaders_Project_p5.js",
         linkDeploy: "https://space-invaders-neon.vercel.app/"
     },
     {
         name: "Arkanoid (P5.js)",
         img: "src/img/projects/arkanoid_img.png",
-        description: "Uma réplica simples do famoso jogo Arkanoid desenvolvida com a lib P5.js (somente para pc)",
+        description: "Uma réplica simples do famoso jogo Arkanoid desenvolvida com o framework P5.js (somente para pc)",
         linkCode: "https://github.com/Luiz-Inaldo/Arkanoid_Project_P5.js_lib",
         linkDeploy: "https://arkanoid-project-p5-js-lib.vercel.app/"
     },
@@ -28,7 +28,7 @@ const projects = [
         description: "Uma tabuada onde o JavaScript é aplicado para manipular o DOM, dando dinamismo ao projeto (responsivo).",
         linkCode: "https://github.com/Luiz-Inaldo/Tabuada_Dinamica_Com_JS",
         linkDeploy: "https://tabuadadinamica.vercel.app/"
-    },
+    }
 ]
 
 export function displayProjects() {
@@ -45,7 +45,7 @@ export function displayProjects() {
                 <span class="project-description">${project.description}</span>
                 <span class="project-links">
                     <a href="${project.linkCode}" target="_blank">GitHub code</a>
-                    <a href="${project.linkDeploy}" target="_blank">Vercel project</a>
+                    <a href="${project.linkDeploy}" target="_blank">Link Deploy</a>
                 </span>
             </div>
         
