@@ -19,7 +19,7 @@ body {
     inset: 0;
     z-index: -1;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: url("/src/img/background5.png");
     background-position: center;
     background-size: cover;
@@ -65,7 +65,7 @@ header {
 .navbar {
     color: #fff;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
     width: 0;
     transition: all 0.2s;
 }
@@ -204,7 +204,7 @@ main {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main section {
