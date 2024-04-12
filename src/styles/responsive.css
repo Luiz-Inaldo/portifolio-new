@@ -43,24 +43,57 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
 
     main section {
         overflow: scroll !important;
     }
 
-    #home {
+    #home,
+    #about {
         flex-direction: column;
-        padding: 0 1rem;
+        padding: .8rem 1rem;
 
         & .paragraph {
-            text-align: center;
+            text-align: none;
+            padding: 1rem;
         }
     }
 
     .navbar.active {
         padding: 10px !important;
         width: 180px !important;
+    }
+
+    #about h2 {
+        font-size: 2rem !important;
+        margin-block: 30px !important;
+    }
+
+    .container {
+        height: fit-content !important;
+        justify-content: center;
+        gap: 10px !important;
+    }
+
+    .container-img>img {
+        width: 150px !important;
+    }
+
+    .skills img {
+        width: 30px !important;
+    }
+
+    #projects h2 {
+        font-size: 24px !important;
+    }
+
+    #wrapper p {
+        display: none !important;
+    }
+
+    .projects-container {
+        flex-direction: column;
     }
 
 }
