@@ -14,14 +14,24 @@ function engage() {
     const homeSection = document.getElementById('home');
     const aboutSection = document.getElementById('about');
     const projectsSection = document.getElementById('projects');
+    const copy = document.querySelector('.copy');
     
+
+    //events
     menuButton.addEventListener('click', openCloseMenu);
     
     links.forEach(link => switchSection(link));
     
-    linkSub.addEventListener("click", () => {
-        subMenu.classList.toggle('active');
-        arrowLink.classList.toggle('active');
+
+    /* eventos do mouse em relação aos sublinks do menu*/
+    linkSub.addEventListener("mouseover", () => {
+        subMenu.classList.add('active');
+        arrowLink.classList.add('active');
+    });
+
+    linkSub.addEventListener("mouseout", () => {
+        subMenu.classList.remove('active');
+        arrowLink.classList.remove('active');
     });
 
     // displaying projects
@@ -35,6 +45,7 @@ function engage() {
         }
         nav.classList.toggle('active');
         menuButton.classList.toggle('open');
+        copy.classList.toggle('show')
     }
 
     function switchSection(link) {

@@ -57,6 +57,7 @@
         & .paragraph {
             text-align: none;
             padding: 1rem;
+            line-height: 1;
         }
     }
 
